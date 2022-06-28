@@ -270,7 +270,7 @@ main {
 .gusto__body-subtitle {
   font-size: 15px;
   text-align: right;
-  padding: 0 10px 20px 0;
+  padding: 0 0 20px 0;
   -webkit-transform: translate(100%, 0);
       -ms-transform: translate(100%, 0);
           transform: translate(100%, 0);
@@ -357,21 +357,22 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  bottom: 10%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  bottom: 15%;
   right: 10%;
+  text-align: center;
 }
 
 .gusto__connect-text {
   color: #531f07;
   font-size: 14px;
   background-color: #fff0dd;
-  padding: 5px;
-  font-weight: bold;
+  padding: 10px;
+  font-weight: 600;
   border-radius: 3px;
-  margin: 0 15px 12px 0;
+  margin: 0 15px 0px 0;
 }
 
 .gusto__connect-icon-items {
@@ -535,7 +536,7 @@ main {
   display: none;
   position: fixed;
   z-index: 10;
-  bottom: 2%;
+  bottom: 5%;
   right: 10%;
   cursor: pointer;
 }
@@ -543,7 +544,7 @@ main {
 .darkblock {
   position: absolute;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 1;
   background-color: #000;
   opacity: 0.2;
@@ -841,7 +842,7 @@ hr {
 }
 
 .reserve__body {
-  padding: 0 10%;
+  padding: 20px 10%;
 }
 
 .reserve__body-content {
@@ -853,10 +854,11 @@ hr {
 .reserve__body-title {
   font-size: 46px;
   font-family: Georgia;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
 }
 
 .reserve__body-text {
+  color: #000;
   font-size: 20px;
   padding-bottom: 30px;
 }
@@ -869,6 +871,7 @@ hr {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  text-align: left;
 }
 
 .form-body-items {
@@ -876,7 +879,7 @@ hr {
   height: 60px;
   font-size: 16px;
   border-bottom: 1px solid #b3b3b3;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .form-body-date {
@@ -884,7 +887,7 @@ hr {
 }
 
 .form-body button {
-  margin: 0 auto 20px;
+  margin: 20px auto 35px;
   color: #613434;
   border: 3px solid #613434;
   text-transform: uppercase;
@@ -898,14 +901,13 @@ hr {
 }
 
 .form-body input[type=date]::-webkit-calendar-picker-indicator {
-  cursor: pointer;
-  color: rgba(0, 0, 0, 0);
-  opacity: 1;
-  display: block;
-  background: url("../img/reserve/calendar.svg") no-repeat;
-  width: 25px;
-  height: 25px;
-  border-width: thin;
+  display: none;
+}
+
+.date label img {
+  vertical-align: middle;
+  width: 40px;
+  height: 40px;
 }
 
 .food {
@@ -996,7 +998,7 @@ hr {
 }
 
 .delivery__body {
-  padding: 50px 0 70px 0;
+  padding: 50px 0 100px 0;
   text-align: center;
 }
 
@@ -1010,7 +1012,7 @@ hr {
 
 .delivery__body-link {
   font-size: 16px;
-  border: 2px solid #531f07;
+  border: 3px solid #531f07;
   padding: 20px 40px;
 }
 
@@ -1037,6 +1039,10 @@ hr {
   max-width: 750px;
 }
 
+.contact__body-items-title {
+  font-size: 52px;
+}
+
 .contact__body-items-text {
   font-size: 20px;
 }
@@ -1045,30 +1051,32 @@ hr {
   padding-bottom: 10px;
 }
 
+.contact__body-items-text-link {
+  font-weight: 300;
+}
+
 .contact__body-items-adress {
   font-size: 22px;
+  font-weight: 300;
 }
 
 .contact__body-items-icon-link {
   margin-left: 10px;
 }
 
+.item:not(:last-child) {
+  padding-bottom: 50px;
+}
+
 .no-webp .parallax_img{
-  background-image: url(../img/contact/01.png); }
+  background: url(../img/contact/01.png) no-repeat fixed center; }
 
 .parallax_img {
   top: 0;
   width: 100%;
-  position: absolute;
   height: 100%;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-position: center center;
+  position: absolute;
   background-size: cover;
-}
-
-.item:not(:last-child) {
-  padding-bottom: 50px;
 }
 
 #map {
@@ -1179,6 +1187,7 @@ hr {
 
 .gusto-menu-text {
   color: #fff;
+  font-family: Georgia;
 }
 
 .gusto-menu-text h2 {
@@ -1559,6 +1568,11 @@ hr {
     display: none;
   }
 
+  .date label img {
+    width: 30px;
+    height: 30px;
+  }
+
   .slider__item {
     height: 500px;
   }
@@ -1591,8 +1605,7 @@ hr {
 
   .title {
     text-align: center;
-    font-size: 30px;
-    padding-bottom: 10px;
+    font-size: 45px;
   }
 
   .gusto__connect {
@@ -1630,6 +1643,7 @@ hr {
   }
 
   .gusto__body-subtitle {
+    padding-bottom: 40px;
     text-align: center;
   }
 
@@ -1757,13 +1771,16 @@ hr {
   }
 
   .column-1__item-1 {
-    margin-bottom: 0;
+    margin-bottom: 10px;
+  }
+
+  .column-1__item-2 {
+    margin-bottom: 10px;
   }
 
   .reserve__body-title {
     font-size: 30px;
     font-family: Georgia;
-    padding-bottom: 20px;
   }
 
   .reserve__body-text {
@@ -1796,7 +1813,7 @@ hr {
   }
 
   .delivery__body-title {
-    padding-bottom: 50px;
+    padding-bottom: 80px;
   }
 
   .contact__body {
@@ -1805,7 +1822,11 @@ hr {
 
   .contact__body-items {
     max-width: 450px;
-    padding: 50px 0px;
+    padding: 50px 20px;
+  }
+
+  .contact__body-items-text {
+    font-size: 16px;
   }
 
   .item:not(:last-child) {
@@ -1854,7 +1875,29 @@ hr {
   }
 
   .tabs > div {
-    padding: 20px 0 0 30px;
+    padding: 20px 0 0 20px;
+  }
+
+  .tabs__block-title {
+    font-size: 14px;
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 5px;
+  }
+
+  .tabs__block-price {
+    font-size: 14px;
+    color: #000;
+    padding-bottom: 5px;
+  }
+
+  .tabs__block-price span {
+    color: rgb(84, 84, 84);
+    font-size: 14px;
+  }
+
+  .tabs__block-ingredients {
+    font-size: 14px;
   }
 
   .pizza-menu {
@@ -1925,7 +1968,7 @@ hr {
   }
 
   .gusto__body-subtitle {
-    padding: 20px 0;
+    padding: 30px 0;
   }
 
   .gusto__body-buttons {
@@ -1970,4 +2013,4 @@ hr {
   }
 }
 
-.webp .parallax_img{ background-image: url(../img/contact/01.webp); }
+.webp .parallax_img{ background: url(../img/contact/01.webp) no-repeat fixed center; }
