@@ -544,7 +544,7 @@ main {
 .darkblock {
   position: absolute;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: 1;
   background-color: #000;
   opacity: 0.2;
@@ -900,16 +900,6 @@ hr {
   border-bottom: 2px solid #000;
 }
 
-.form-body input[type=date]::-webkit-calendar-picker-indicator {
-  display: none;
-}
-
-.date label img {
-  vertical-align: middle;
-  width: 40px;
-  height: 40px;
-}
-
 .food {
   padding: 50px 0;
 }
@@ -1069,13 +1059,17 @@ hr {
 }
 
 .no-webp .parallax_img{
-  background: url(../img/contact/01.png) no-repeat fixed center; }
+  background-image: url(../img/contact/01.png); }
 
 .parallax_img {
   top: 0;
   width: 100%;
   height: 100%;
   position: absolute;
+  height: 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: center center;
   background-size: cover;
 }
 
@@ -1568,11 +1562,6 @@ hr {
     display: none;
   }
 
-  .date label img {
-    width: 30px;
-    height: 30px;
-  }
-
   .slider__item {
     height: 500px;
   }
@@ -2013,4 +2002,4 @@ hr {
   }
 }
 
-.webp .parallax_img{ background: url(../img/contact/01.webp) no-repeat fixed center; }
+.webp .parallax_img{ background-image: url(../img/contact/01.webp); }
