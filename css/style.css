@@ -900,6 +900,30 @@ hr {
   border-bottom: 2px solid #000;
 }
 
+.form-body input[type=date]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0);
+  opacity: 1;
+  display: block;
+  background: url("../img/reserve/calendar.svg") no-repeat;
+  width: 25px;
+  height: 25px;
+  border-width: thin;
+}
+
+.date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #000;
+}
+
 .food {
   padding: 50px 0;
 }
